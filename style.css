@@ -1,5 +1,5 @@
 body{
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,8 +24,3 @@ body{
     border-radius: 10px;
   }
   
-@media screen and (max-width:786px) {
-body{
-    height: auto;
-}
-}
