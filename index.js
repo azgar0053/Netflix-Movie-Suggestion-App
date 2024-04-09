@@ -1665,6 +1665,8 @@ function answer53(event) {
   } else {
     question("Do you like your humor to be more or less lewd");
     valDiv.removeEventListener("click", answer53);
+    btn1.textContent="More";
+    btn2.textContent="Less"
     valDiv.addEventListener("click", answer65);
   }
 }
