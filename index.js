@@ -1027,7 +1027,7 @@ function answer(event) {
     question("Do you have to watch it with them?");
     valDiv.removeEventListener("click", answer);
     valDiv.addEventListener("click", answer1);
-  } else {
+  } else if(val=="no") {
     question("TV series or Movies");
     btn1.textContent = "TV series";
     btn2.textContent = "Movies";
@@ -1042,7 +1042,7 @@ function answer1(event) {
     question("Feeling nostalgic?");
     valDiv.removeEventListener("click", answer1);
     valDiv.addEventListener("click", answer3);
-  } else {
+  } else if(val=="no") {
     question("Girls Only");
     valDiv.removeEventListener("click", answer1);
     valDiv.addEventListener("click", answer4);
@@ -1057,7 +1057,7 @@ function answer2(event) {
     btn2.textContent = "60";
     valDiv.removeEventListener("click", answer2);
     valDiv.addEventListener("click", answer5);
-  } else {
+  } else if(val=="no") {
     question("Want your night to be action packed?");
     valDiv.removeEventListener("click", answer2);
     valDiv.addEventListener("click", answer6);
@@ -1072,7 +1072,7 @@ function answer3(event) {
     btn2.textContent = "New";
     valDiv.removeEventListener("click", answer3);
     valDiv.addEventListener("click", answer7);
-  } else {
+  } else if(val=="no") {
     question("Are the kids frightened easily?");
     valDiv.removeEventListener("click", answer3);
     valDiv.addEventListener("click", answer8);
@@ -1083,7 +1083,7 @@ function answer4(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 0); //The secret Garden
-  } else {
+  } else if(val=="no") {
     question("Muppets or Music?");
     btn1.textContent = "Muppets";
     btn2.textContent = "Music";
@@ -1098,7 +1098,7 @@ function answer5(event) {
     question("You want to see things in B&W?");
     valDiv.removeEventListener("click", answer5);
     valDiv.addEventListener("click", answer10);
-  } else {
+  } else if(val=="no") {
     question("Coming of Age story line?");
     valDiv.removeEventListener("click", answer5);
     valDiv.addEventListener("click", answer11);
@@ -1111,7 +1111,7 @@ function answer6(event) {
     question("have you seen the Terminator?");
     valDiv.removeEventListener("click", answer6);
     valDiv.addEventListener("click", answer12);
-  } else {
+  } else if(val=="no") {
     question("What about a Documentary?");
     valDiv.removeEventListener("click", answer6);
     valDiv.addEventListener("click", answer13);
@@ -1122,7 +1122,7 @@ function answer7(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 1); //Alice in the worderLand
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 2); //The Lorax
   }
 }
@@ -1131,7 +1131,7 @@ function answer8(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 3); //Rango
-  } else {
+  } else if(val=="no") {
     question("Musical?");
     valDiv.removeEventListener("click", answer8);
     valDiv.addEventListener("click", answer14);
@@ -1142,7 +1142,7 @@ function answer9(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 4); //sesame streets
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 5); //Yo gabba gabba
   }
 }
@@ -1151,7 +1151,7 @@ function answer10(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 6); //the twilight zone
-  } else {
+  } else if(val=="no") {
     question("Animated?");
     valDiv.removeEventListener("click", answer10);
     valDiv.addEventListener("click", answer15);
@@ -1159,10 +1159,10 @@ function answer10(event) {
 }
 
 function answer11(event) {
-  const val2 = event.target.value;
-  if (val2 == "yes") {
+  const val = event.target.value;
+  if (val == "yes") {
     suggestedMovie(movies, 7); //Freaks and Geeks
-  } else if (val2 == "no") {
+  } else if(val=="no") {
     question("Crime Drama?");
     valDiv.removeEventListener("click", answer11);
     valDiv.addEventListener("click", answer16);
@@ -1173,7 +1173,7 @@ function answer12(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 8); //Terminator 2
-  } else {
+  } else if(val=="no") {
     question("How about a War movie?");
     valDiv.removeEventListener("click", answer12);
     valDiv.addEventListener("click", answer17);
@@ -1186,7 +1186,7 @@ function answer13(event) {
     question("Do you consider snowboard films to be documentaries ?");
     valDiv.removeEventListener("click", answer13);
     valDiv.addEventListener("click", answer18);
-  } else {
+  } else if(val=="no") {
     question("Monster murderers and Madness?");
     valDiv.removeEventListener("click", answer13);
     valDiv.addEventListener("click", answer19);
@@ -1197,7 +1197,7 @@ function answer14(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 9); //The nightmare before christmas
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 10); //ParaNorman
   }
 }
@@ -1208,7 +1208,7 @@ function answer15(event) {
     question("Dick, fart jokes, with random musical interludes?");
     valDiv.removeEventListener("click", answer15);
     valDiv.addEventListener("click", answer20);
-  } else {
+  } else if(val=="no") {
     question("Do you want to remember laughter?");
     valDiv.removeEventListener("click", answer15);
     valDiv.addEventListener("click", answer21);
@@ -1223,7 +1223,7 @@ function answer16(event) {
     btn2.textContent = "Thriller";
     valDiv.removeEventListener("click", answer16);
     valDiv.addEventListener("click", answer22);
-  } else {
+  } else if(val=="no") {
     question("Escape with some fantasy/Sci-fi?");
     valDiv.removeEventListener("click", answer16);
     valDiv.addEventListener("click", answer23);
@@ -1234,7 +1234,7 @@ function answer17(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 11); //Black hawk down
-  } else {
+  } else if(val=="no") {
     question("Horses, boots and 10-gallons hats ?");
     valDiv.removeEventListener("click", answer17);
     valDiv.addEventListener("click", answer24);
@@ -1245,7 +1245,7 @@ function answer18(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 12); // Art of Flight
-  } else {
+  } else if(val=="no") {
     question("Do you want to have yout face melted off from the maximum rock?");
     valDiv.removeEventListener("click", answer18);
     valDiv.addEventListener("click", answer25);
@@ -1258,7 +1258,7 @@ function answer19(event) {
     question("Should there be a blood-soaked chainsaw at some point");
     valDiv.removeEventListener("click", answer19);
     valDiv.addEventListener("click", answer26);
-  } else {
+  } else if(val=="no") {
     question("Are you in the mood to laugh?");
     valDiv.removeEventListener("click", answer19);
     valDiv.addEventListener("click", answer27);
@@ -1269,7 +1269,7 @@ function answer20(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 13); //family Guy
-  } else {
+  } else if(val=="no") {
     question("Gratuitous cleavage and up-skirt shots");
     valDiv.removeEventListener("click", answer20);
     valDiv.addEventListener("click", answer28);
@@ -1282,7 +1282,7 @@ function answer21(event) {
     question("Do you want to do as little thinking as possible ");
     valDiv.removeEventListener("click", answer21);
     valDiv.addEventListener("click", answer29);
-  } else {
+  } else if(val=="no") {
     question("Do you like Paranormal ?");
     valDiv.removeEventListener("click", answer21);
     valDiv.addEventListener("click", answer30);
@@ -1293,7 +1293,7 @@ function answer22(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 14); //Sherlock BBC
-  } else {
+  } else if(val=="no") {
     question("Do you want the most intense show ever made ?");
     valDiv.removeEventListener("click", answer22);
     valDiv.addEventListener("click", answer31);
@@ -1306,7 +1306,7 @@ function answer23(event) {
     question("Head to outer space?");
     valDiv.removeEventListener("click", answer23);
     valDiv.addEventListener("click", answer32);
-  } else {
+  } else if(val=="no") {
     question("Politics and fast and talking?");
     valDiv.removeEventListener("click", answer23);
     valDiv.addEventListener("click", answer33);
@@ -1321,7 +1321,7 @@ function answer24(event) {
     btn1.textContent = "Old";
     btn2.textContent = "Fresh";
     valDiv.addEventListener("click", answer34);
-  } else {
+  } else if(val=="no") {
     question("Do you want to keep it serious?");
     valDiv.removeEventListener("click", answer24);
     valDiv.addEventListener("click", answer35);
@@ -1332,7 +1332,7 @@ function answer25(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 15); //Year of the Horse
-  } else {
+  } else if(val=="no") {
     question("Take it to the streets?");
     valDiv.removeEventListener("click", answer25);
     valDiv.addEventListener("click", answer36);
@@ -1343,7 +1343,7 @@ function answer26(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 16); //The Evil Dead
-  } else {
+  } else if(val=="no") {
     question("Three parts classic horror, one part something new?");
     valDiv.removeEventListener("click", answer26);
     valDiv.addEventListener("click", answer37);
@@ -1356,7 +1356,7 @@ function answer27(event) {
     question("Do you want some drama with your laughter?");
     valDiv.removeEventListener("click", answer27);
     valDiv.addEventListener("click", answer38);
-  } else {
+  } else if(val=="no") {
     question("Do you hunger for adventure?");
     valDiv.removeEventListener("click", answer27);
     valDiv.addEventListener("click", answer39);
@@ -1367,7 +1367,7 @@ function answer28(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 17); //Highschool of the dead
-  } else {
+  } else if(val=="no") {
     question("A little more childish or a little more mature?");
     valDiv.removeEventListener("click", answer28);
     btn1.textContent = "Mature";
@@ -1382,7 +1382,7 @@ function answer29(event) {
     question("Skit show?");
     valDiv.removeEventListener("click", answer29);
     valDiv.addEventListener("click", answer41);
-  } else {
+  } else if(val=="no") {
     question("Do you dig British humour?");
     valDiv.removeEventListener("click", answer29);
     valDiv.addEventListener("click", answer42);
@@ -1393,7 +1393,7 @@ function answer30(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 18); //The X-files
-  } else {
+  } else if(val=="no") {
     question("Mystery or Spaces?");
     valDiv.removeEventListener("click", answer30);
     btn1.textContent = "Mystery";
@@ -1406,7 +1406,7 @@ function answer31(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 19); //Breaking Bad
-  } else {
+  } else if(val=="no") {
     question("Focus on the Good  guys or Bad guys?");
     valDiv.removeEventListener("click", answer31);
     btn1.textContent = "Good";
@@ -1423,7 +1423,7 @@ function answer32(event) {
     btn1.textContent = "Explore";
     btn2.textContent = "War";
     valDiv.addEventListener("click", answer45);
-  } else {
+  } else if(val=="no") {
     question("Less Science, more fiction?");
     valDiv.removeEventListener("click", answer32);
     valDiv.addEventListener("click", answer46);
@@ -1436,7 +1436,7 @@ function answer33(event) {
     question("Kevin, Verbal Kent, Spacey?");
     valDiv.removeEventListener("click", answer33);
     valDiv.addEventListener("click", answer47);
-  } else {
+  } else if(val=="no") {
     question("Steeped in History?");
     valDiv.removeEventListener("click", answer33);
     valDiv.addEventListener("click", answer48);
@@ -1447,7 +1447,7 @@ function answer34(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 20); //Once Upon a Time in the West
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 21); //True Grit
   }
 }
@@ -1460,7 +1460,7 @@ function answer35(event) {
     btn1.textContent = "Future";
     btn2.textContent = "Now";
     valDiv.addEventListener("click", answer49);
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 22); //Top Gun
   }
 }
@@ -1473,7 +1473,7 @@ function answer36(event) {
     btn1.textContent = "Pain";
     btn2.textContent = "Paint";
     valDiv.addEventListener("click", answer50);
-  } else {
+  } else if(val=="no") {
     question("Do you want to see just how ridiculous religion can be?");
     valDiv.removeEventListener("click", answer36);
     valDiv.addEventListener("click", answer51);
@@ -1484,7 +1484,7 @@ function answer37(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 23); //Cabin in the Woods
-  } else {
+  } else if(val=="no") {
     question("Do abandoned asylums scare the sense out of you?");
     valDiv.removeEventListener("click", answer37);
     valDiv.addEventListener("click", answer52);
@@ -1497,7 +1497,7 @@ function answer38(event) {
     question("Are you adverse to black and white?");
     valDiv.removeEventListener("click", answer38);
     valDiv.addEventListener("click", answer53);
-  } else {
+  } else if(val=="no") {
     question("Do you mind it when people break out singing?");
     valDiv.removeEventListener("click", answer38);
     valDiv.addEventListener("click", answer54);
@@ -1510,7 +1510,7 @@ function answer39(event) {
     question("Were you a fan of Firefly?");
     valDiv.removeEventListener("click", answer39);
     valDiv.addEventListener("click", answer55);
-  } else {
+  } else if(val=="no") {
     question("Care for some criminal intent?");
     valDiv.removeEventListener("click", answer39);
     valDiv.addEventListener("click", answer56);
@@ -1523,7 +1523,7 @@ function answer40(event) {
     question("Do you want to watch the most fucked up show on Netflix?");
     valDiv.removeEventListener("click", answer40);
     valDiv.addEventListener("click", answer57);
-  } else {
+  } else if(val=="no") {
     question("World-Class social commentry?");
     valDiv.removeEventListener("click", answer40);
     valDiv.addEventListener("click", answer58);
@@ -1536,7 +1536,7 @@ function answer41(event) {
     question("Do you like things to get a little odd, little quirky?");
     valDiv.removeEventListener("click", answer41);
     valDiv.addEventListener("click", answer59);
-  } else {
+  } else if(val=="no") {
     question("Are you really into weed and liquor?");
     valDiv.removeEventListener("click", answer41);
     valDiv.addEventListener("click", answer60);
@@ -1547,7 +1547,7 @@ function answer42(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 24); //Fawlty Towers
-  } else {
+  } else if(val=="no") {
     question("Do you reckon to be a bit of a sophisticate?");
     valDiv.removeEventListener("click", answer42);
     valDiv.addEventListener("click", answer61);
@@ -1562,7 +1562,7 @@ function answer43(event) {
     btn1.textContent="Process";
     btn2.textContent="Solution"
     valDiv.addEventListener("click", answer90);
-  } else {
+  } else if(val=="no") {
     question("Are you extremely nostalgic?");
     valDiv.removeEventListener("click", answer43);
     valDiv.addEventListener("click", answer91);
@@ -1573,7 +1573,7 @@ function answer44(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 25); //Law and Order
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 26); //Sons of Anarchy
   }
 }
@@ -1582,7 +1582,7 @@ function answer45(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 27); //Star Trek : TNG
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 28); //BattleStar Galactica
   }
 }
@@ -1593,7 +1593,7 @@ function answer46(event) {
     question("Braiiiiiiiins?");
     valDiv.removeEventListener("click", answer46);
     valDiv.addEventListener("click", answer92);
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 29); //Sliders
   }
 }
@@ -1602,7 +1602,7 @@ function answer47(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 30); //The House of Cards
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 31); //The West Wing
   }
 }
@@ -1611,7 +1611,7 @@ function answer48(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 32); //The Tudors
-  } else {
+  } else if(val=="no") {
     question("Do you like things to be a little strange?");
     valDiv.removeEventListener("click", answer48);
     valDiv.addEventListener("click", answer62);
@@ -1622,7 +1622,7 @@ function answer49(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 33); //Aeon Flux
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 34); //Shooter
   }
 }
@@ -1631,7 +1631,7 @@ function answer50(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 35); //Bones Brigade: An Autobiography
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 36); //Exit through the Gift Shop
   }
 }
@@ -1640,7 +1640,7 @@ function answer51(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 37); //Religuluos
-  } else {
+  } else if(val=="no") {
     question("Are you Woody Alien fan? or would you like to become one?");
     valDiv.removeEventListener("click", answer51);
     valDiv.addEventListener("click", answer63);
@@ -1651,7 +1651,7 @@ function answer52(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 38); //Session 9
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 39); //Insidiuos
   }
 }
@@ -1662,7 +1662,7 @@ function answer53(event) {
     question("Do you love Paul Newman? Do you want to?");
     valDiv.removeEventListener("click", answer53);
     valDiv.addEventListener("click", answer64);
-  } else {
+  } else if(val=="no") {
     question("Do you like your humor to be more or less lewd");
     valDiv.removeEventListener("click", answer53);
     btn1.textContent="More";
@@ -1675,7 +1675,7 @@ function answer54(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 40); //Happy Gillmore
-  } else {
+  } else if(val=="no") {
     question("Do you find clever wordplay entertaining?");
     valDiv.removeEventListener("click", answer54);
     valDiv.addEventListener("click", answer89);
@@ -1686,7 +1686,7 @@ function answer55(event) {``
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 41); //Serenity
-  } else {
+  } else if(val=="no") {
     question("Do you like main rolls to be played by kids?");
     valDiv.removeEventListener("click", answer55);
     valDiv.addEventListener("click", answer87);
@@ -1699,7 +1699,7 @@ function answer56(event) {
     question("Do you enjoy diatribes entirely unrelated to the plot?");
     valDiv.removeEventListener("click", answer56);
     valDiv.addEventListener("click", answer66);
-  } else {
+  } else if(val=="no") {
     question("Ready for some romance?");
     valDiv.removeEventListener("click", answer56);
     valDiv.addEventListener("click", answer67);
@@ -1710,7 +1710,7 @@ function answer57(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 42); //Ren & Stimpy Show
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 43); //Archer
   }
 }
@@ -1719,7 +1719,7 @@ function answer58(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 44); //Soutrh Park
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 45); //Futurama
   }
 }
@@ -1728,7 +1728,7 @@ function answer59(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 46); //The Kids in the Hall
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 47); //Chappelle' Show
   }
 }
@@ -1739,7 +1739,7 @@ function answer60(event) {
     question("Can you hear the shit hawks circling in the shit winds?");
     valDiv.removeEventListener("click", answer60);
     valDiv.addEventListener("click", answer68);
-  } else {
+  } else if(val=="no") {
     question("Are you really into Football?");
     valDiv.removeEventListener("click", answer60);
     valDiv.addEventListener("click", answer69);
@@ -1750,7 +1750,7 @@ function answer61(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 48); //Frasier
-  } else {
+  } else if(val=="no") {
     question("Do you want a show with astounding rewatchability?");
     valDiv.removeEventListener("click", answer61);
     valDiv.addEventListener("click", answer70);
@@ -1761,7 +1761,7 @@ function answer62(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 49); //Twin Peaks
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 50); //Mad Men
   }
 }
@@ -1770,7 +1770,7 @@ function answer63(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 51); //Woody Allen: A Documentary
-  } else {
+  } else if(val=="no") {
     question("Do subtitles bother you?");
     valDiv.removeEventListener("click", answer63);
     valDiv.addEventListener("click", answer71);
@@ -1785,7 +1785,7 @@ function answer64(event) {
     btn1.textContent = "Great";
     btn2.textContent = "Legendary";
     valDiv.addEventListener("click", answer72);
-  } else {
+  } else if(val=="no") {
     question("Pretty or Gritty");
     valDiv.removeEventListener("click", answer64);
     btn1.textContent = "Pretty";
@@ -1798,7 +1798,7 @@ function answer65(event) {
   const val = event.target.value;
   if (val == "yes") {
     suggestedMovie(movies, 52); //Clerks
-  } else {
+  } else if(val=="no") {
     suggestedMovie(movies, 53); //ManHattan
   }
 }
@@ -1808,7 +1808,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
       suggestedMovie(movies, 54); //Reservoir Dogs
-    } else {
+    } else if(val=="no") {
         question("Are you upset by seeing Drug use?");
         valDiv.removeEventListener("click", answer66);
         valDiv.addEventListener("click", answer74);    }
@@ -1823,7 +1823,7 @@ function answer66(event) {
         btn1.textContent="Tom";
         btn2.textContent="Matt"
         valDiv.addEventListener("click", answer75);
-    } else {
+    } else if(val=="no") {
         question("Hypothetically: would a long brutal rape scene ruin your night?");
         valDiv.removeEventListener("click", answer67);
         valDiv.addEventListener("click", answer76);  
@@ -1835,7 +1835,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 55); //Trailer Park Boys
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 56); //Workaholic
     }
   }
@@ -1845,7 +1845,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 57); //The League
-    } else {
+    } else if(val=="no") {
         question("Insanity or Satire?");
         valDiv.removeEventListener("click", answer69);
         btn1.textContent="Insanity";
@@ -1860,7 +1860,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 58); //Arrested Development
-    } else {
+    } else if(val=="no") {
         question("Do you find awkward situations funny?");
         valDiv.removeEventListener("click", answer70);
         valDiv.addEventListener("click", answer78);
@@ -1871,7 +1871,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 59); //Grizzly Man
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 60); //Man on Wire
     }
   }
@@ -1881,7 +1881,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 61); //Slap shot
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 62); //Butch Cassidy and Sundance Kid
     }
   }
@@ -1893,7 +1893,7 @@ function answer66(event) {
         question("Slow-paced quirky romantic indie?");
         valDiv.removeEventListener("click", answer73);
         valDiv.addEventListener("click", answer79);
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 63); //Trainspotting
     }
   }
@@ -1905,7 +1905,7 @@ function answer66(event) {
         question("Mob Story?");
         valDiv.removeEventListener("click", answer74);
         valDiv.addEventListener("click", answer80);
-    } else {
+    } else if(val=="no") {
         question("Do you love Hip-Hop?");
         valDiv.removeEventListener("click", answer74);
         valDiv.addEventListener("click", answer81);
@@ -1917,7 +1917,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 64); //Vanilla Sky
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 65); //Good Will Hunting
     }
   }
@@ -1929,7 +1929,7 @@ function answer66(event) {
         question("Do you want to be completely confused?");
         valDiv.removeEventListener("click", answer76);
         valDiv.addEventListener("click", answer82);
-    } else {
+    } else if(val=="no") {
         question("Have you seen the original girl with dragon tattoo?");
         valDiv.removeEventListener("click", answer76);
         valDiv.addEventListener("click", answer83);
@@ -1941,7 +1941,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 66); //Its always sunny in philadalphia
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 67); //Parks and the Recreation
     }
   }
@@ -1951,7 +1951,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 68); //Louie
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 69); //Cheers
     }
   }
@@ -1960,7 +1960,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 70); //Loss in Translation
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 71); //Big Fish
     }
   }
@@ -1969,7 +1969,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 72); //MIllers Crossing
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 73); //Clay Pigeons
     }
   }
@@ -1979,7 +1979,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 74); //Hustle and Flow
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 75); //Traffic
     }
   }
@@ -1988,7 +1988,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 76); //Pi
-    } else {
+    } else if(val=="no") {
         question("Are subtitles going to be a problem?");
         valDiv.removeEventListener("click", answer82);
         valDiv.addEventListener("click", answer84);
@@ -2002,7 +2002,7 @@ function answer66(event) {
         question("Have you seen the girl who played with fire?");
         valDiv.removeEventListener("click", answer83);
         valDiv.addEventListener("click", answer85);
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 77); //The Girl with a Dragon tattoo
     }
   }
@@ -2013,7 +2013,7 @@ function answer66(event) {
         question("Keep it mellow?");
         valDiv.removeEventListener("click", answer84);
         valDiv.addEventListener("click", answer86);
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 78); //Tomboy
     }
   }
@@ -2022,7 +2022,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 79); //The girl who kicked the hornet nest
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 80); //The girl whi played with fire
     }
   }
@@ -2031,7 +2031,7 @@ function answer66(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 81); //Midnight Cowboy
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 82); //The Machinist
     }
   }
@@ -2044,7 +2044,7 @@ function answer66(event) {
         question("Want some thrills with your Adventure?");
         valDiv.removeEventListener("click", answer87);
         valDiv.addEventListener("click", answer88);
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 83); //Star Trek II: The Wrath of Khan
   }
 }
@@ -2054,7 +2054,7 @@ function answer88(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 84); //Super 8
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 85); //the hunger games
   }
 }
@@ -2063,7 +2063,7 @@ function answer89(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 86); //Duck Soup
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 87); //Ferris buellers day off
   }
 }
@@ -2072,7 +2072,7 @@ function answer90(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 88); //Columbo
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 89); //The Rockford Files
   }
 }
@@ -2081,7 +2081,7 @@ function answer91(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 90); //Star Trek
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 91); //Firefly
   }
 }
@@ -2091,7 +2091,7 @@ function answer92(event) {
     const val = event.target.value;
     if (val == "yes") {
         suggestedMovie(movies, 92); //the Walking Dead
-    } else {
+    } else if(val=="no") {
         suggestedMovie(movies, 93); //Lost
   }
 }
